@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var can=document.getElementById("can");
+				var ctx=can.getContext("2d");
+				
+				var img=new Image();
+				img.src="img/lion9.jpg";
+				img.onload=function(){//图像加载回调函数
+					ctx.drawImage(img,20,20);
+					
+					ctx.drawImage(img,50,20,100,120,20,220,100,150);
+				}
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="can" width="800" height="400" style="border: solid 1px #000;"></canvas>
+	</body>
+</html>

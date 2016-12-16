@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var can=document.getElementById("can");
+				var ctx=can.getContext("2d");
+				
+				ctx.textAlign="center";/*文本水平对齐方式*/
+				ctx.textBaseline="center";/*文本垂直对齐方式*/
+				ctx.fillStyle="aqua"
+				ctx.font="34px 微软雅黑";
+				ctx.fillText("大家好",150,150);
+				
+				ctx.textBaseline="bottom";
+				ctx.strokeStyle="red";
+				ctx.font="bold 34px 微软雅黑";
+				ctx.strokeText("大家好",150,200);
+				
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="can" width="400" height="300" style="border: solid 1px #000;"></canvas>
+	</body>
+</html>

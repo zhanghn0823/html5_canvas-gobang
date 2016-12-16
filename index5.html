@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var can=document.getElementById("can");
+				var ctx=can.getContext("2d");
+				
+//				ctx.beginPath();
+//				ctx.lineWidth="2";
+//				ctx.strokeStyle="red"; // 红色路径
+//				ctx.moveTo(0,20);
+//				ctx.lineTo(250,20);
+//				ctx.stroke(); 
+//				
+//				ctx.lineWidth="2";
+//				ctx.textBaseline="top";
+				ctx.shadowBlur="9";/*阴影模糊程度*/
+				ctx.shadowOffsetX="5";/*阴影偏移*/
+				ctx.shadowOffsetY="5"
+				
+				ctx.shadowColor="#000";
+				ctx.strokeStyle="mediumvioletred"; 
+				ctx.font="bold 34px 微软雅黑";
+				ctx.strokeText("大家好",100,80);
+				
+				ctx.fillStyle="aqua";
+				
+				
+				ctx.shadowBlur="9";
+				ctx.shadowColor="yellow";
+				ctx.shadowOffsetX=5;
+				ctx.shadowOffsetY=5;
+				ctx.fillRect(80,150,100,60);
+				
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="can" width="400" height="300" style="border: solid 1px #000;"></canvas>
+	</body>
+</html>

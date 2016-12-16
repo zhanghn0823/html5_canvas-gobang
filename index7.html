@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var can=document.getElementById("can");
+				var ctx=can.getContext("2d");
+				
+				ctx.beginPath();
+				ctx.lineWidth="5";
+				ctx.strokeStyle="orange"; // 红色路径
+				ctx.arc(100,100,50,0,2*Math.PI);
+				ctx.stroke(); 
+				ctx.fillStyle="#ccc";
+				ctx.fill();
+				
+				
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="can" width="400" height="300" style="border: solid 1px #000;"></canvas>
+	</body>
+</html>

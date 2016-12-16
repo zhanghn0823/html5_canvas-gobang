@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var can=document.getElementById("can");
+				var ctx=can.getContext("2d");
+				
+				var g=ctx.createLinearGradient(60,60,200,85);
+				g.addColorStop(0,"#eee");
+				g.addColorStop(0.5,"#aaa");
+				g.addColorStop(1,"orange");
+				
+				ctx.fillStyle=g; // 色路径
+				 
+				ctx.fillRect(60,60,200,85); 
+				
+				
+//				画一个圆
+				var grd2=ctx.createRadialGradient(200,200,5,200,200,80);
+				
+				grd2.addColorStop(0,"red");
+				grd2.addColorStop(1,"white");
+				ctx.beginPath();
+				ctx.arc(200,200,80,0,2*Math.PI,false);
+				
+				ctx.closePath();
+				ctx.fillStyle=grd2;
+				ctx.fill();
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="can" width="400" height="300" style="border: solid 1px #000;"></canvas>
+	</body>
+</html>

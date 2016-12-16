@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function init(){
+				var can=document.getElementById("can");
+				var ctx=can.getContext("2d");
+				/*实心矩形*/
+				ctx.fillStyle="blue";
+				ctx.fillRect(50,50,100,60);
+				/*无倒角方形框*/
+				ctx.strokeStyle="red";
+				ctx.lineWidth="6";
+				ctx.lineJoin="miter";
+				ctx.strokeRect(100,150,100,65);
+				/*圆角方形框*/
+				ctx.lineJoin="round";
+				ctx.strokeRect(220,200,100,65);
+			    /*倒角方形框*/
+				ctx.strokeStyle="#0f0";
+				ctx.lineWidth="12";
+				ctx.lineJoin="bevel";
+				ctx.strokeRect(100,40,300,65);
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="can" width="400" height="300" style="border: solid 1px #000;"></canvas>
+	</body>
+</html>
