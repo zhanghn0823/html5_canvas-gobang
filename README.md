@@ -1,4 +1,4 @@
-#html5_canvas-gobang
+# html5_canvas-gobang
 
 ##单机五子棋。
 
